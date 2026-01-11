@@ -57,11 +57,12 @@
 
 @layer components {
   .btn-primary {
-    @apply relative bg-gradient-to-r from-primary-orange to-primary-orange-light text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-orange/50 overflow-hidden;
+    @apply relative bg-gradient-to-r from-primary-orange to-primary-orange-light text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl overflow-hidden;
   }
   
   .btn-primary:hover {
     background: linear-gradient(to right, rgb(251, 146, 60), rgb(249, 115, 22));
+    box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.5);
   }
   
   .btn-primary span {
@@ -69,11 +70,12 @@
   }
   
   .btn-secondary {
-    @apply relative bg-gradient-to-r from-primary-blue to-primary-blue-dark text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-blue/50 overflow-hidden;
+    @apply relative bg-gradient-to-r from-primary-blue to-primary-blue-dark text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl overflow-hidden;
   }
   
   .btn-secondary:hover {
     background: linear-gradient(to right, rgb(30, 58, 138), rgb(30, 64, 175));
+    box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.5);
   }
   
   .btn-secondary span {
@@ -93,10 +95,11 @@
   }
   
   .premium-card {
-    @apply bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2;
+    @apply bg-white rounded-3xl shadow-2xl transition-all duration-500 transform hover:-translate-y-2;
   }
   
   .premium-card:hover {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
     animation: pulse-glow 2s ease-in-out infinite;
   }
   
