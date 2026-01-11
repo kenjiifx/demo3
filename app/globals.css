@@ -4,24 +4,67 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-white text-gray-900 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-extrabold tracking-tight;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-orange hover:bg-primary-orange-light text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply relative bg-gradient-to-r from-primary-orange to-primary-orange-light text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-orange/50 overflow-hidden group;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-orange-light to-primary-orange opacity-0 group-hover:opacity-100 transition-opacity duration-500;
+  }
+  
+  .btn-primary span {
+    @apply relative z-10;
   }
   
   .btn-secondary {
-    @apply bg-primary-blue hover:bg-primary-blue-dark text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply relative bg-gradient-to-r from-primary-blue to-primary-blue-dark text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-blue/50 overflow-hidden group;
+  }
+  
+  .btn-secondary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-blue-dark to-primary-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500;
+  }
+  
+  .btn-secondary span {
+    @apply relative z-10;
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-24 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
     @apply max-w-7xl mx-auto;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+  
+  .premium-card {
+    @apply bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue bg-clip-text text-transparent;
+  }
+  
+  .diagonal-section {
+    @apply relative;
+  }
+  
+  .diagonal-section::before {
+    content: '';
+    @apply absolute inset-0 transform -skew-y-1 origin-top-left;
   }
 }
