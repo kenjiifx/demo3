@@ -57,12 +57,11 @@
 
 @layer components {
   .btn-primary {
-    @apply relative bg-gradient-to-r from-primary-orange to-primary-orange-light text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-orange/50 overflow-hidden group;
+    @apply relative bg-gradient-to-r from-primary-orange to-primary-orange-light text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-orange/50 overflow-hidden;
   }
   
-  .btn-primary::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-primary-orange-light to-primary-orange opacity-0 group-hover:opacity-100 transition-opacity duration-500;
+  .btn-primary:hover {
+    background: linear-gradient(to right, rgb(251, 146, 60), rgb(249, 115, 22));
   }
   
   .btn-primary span {
@@ -70,12 +69,11 @@
   }
   
   .btn-secondary {
-    @apply relative bg-gradient-to-r from-primary-blue to-primary-blue-dark text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-blue/50 overflow-hidden group;
+    @apply relative bg-gradient-to-r from-primary-blue to-primary-blue-dark text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-primary-blue/50 overflow-hidden;
   }
   
-  .btn-secondary::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-primary-blue-dark to-primary-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500;
+  .btn-secondary:hover {
+    background: linear-gradient(to right, rgb(30, 58, 138), rgb(30, 64, 175));
   }
   
   .btn-secondary span {
